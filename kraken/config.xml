@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns="http://www.w3.org/ns/widgets"
+         id="http://obigo.com/Kraken_Benchmark">
+    <icon src="icon.png"/>
+    <content src="index.html" encoding="UTF-8" type="text/html"/>
+    <name>Kraken Javascript Benchmark - 1.1</name>
+    <description>Kraken Javascript Benchmark</description>
+</widget>
