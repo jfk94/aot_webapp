@@ -1,0 +1,1739 @@
+/* Wallpaper */
+body#travel .bbccom_wallpaper #blq-container-inner  {
+    overflow:visible;
+}
+#bbccom_slot_wallpaper_left {
+    height:600px;
+    left:-310px;
+    position:absolute;
+    top:-40px;
+    width:300px;
+}
+#bbccom_slot_wallpaper_right {
+    height:600px;
+    position:absolute;
+    right:-310px;
+    top:-40px;
+    width:300px;
+}
+
+/* Add to allow expanding leaderboards to float above other content */
+#blq-pre-mast {
+    z-index:9999;
+}
+/* BBCCOM base */
+.bbccom_display_none {
+    display:none !important;
+}
+.bbccom_visibility_hidden {
+    height:60px;
+    visibility:hidden;
+}
+/*
+	Color / Typography
+	Text - Uppercase Helvetica then Arial
+	#505050 - Grey for Advertisment text
+	#e5e5e5 - Light Grey background for button in news navigtation
+	#3f3f3f - Background color in stories from 2008 (http://news.bbc.co.uk/2/hi/europe/7560502.stm)
+	#eaeaea - Light color border of the partner button areas
+*/
+.bbccom_text,
+.bbccom_text a,
+.bbccom_text a:hover,
+.bbccom_text a:active,
+.bbccom_text a:visited,
+.lhs .bbccom_text a:link, /* Left hand side button text */
+.lhs .bbccom_text a:visited,
+.lhs .bbccom_text a:active,
+.lhs .bbccom_text a:hover,
+.lhs #bbccom_button .bbccom_text a,
+.lhs #bbccom_button .bbccom_text a:hover,
+#bbccom_sponsor_section_text,
+.bbccom_sponsor_text,
+.photo_gallery #bbccom_sponsor_section_text,
+.bbccom_companion_text,
+.bbccom_companion_text a,
+#bbccom_mpu a,
+#bbccom_mpu_high a,
+#bbccom_leaderboard a,
+#bbccom_leaderboard_bottom a,
+#galothercontentbox .bbccom_text a:link, /* Cream B Picture Gallery Page */
+#navigation .bbccom_text a:link, /* Cream B Story page */
+#secondary-content .bbccom_text a:link,
+#secondary-content .bbccom_text a:visited,
+#secondary-content .bbccom_text a:active,
+#secondary-content .bbccom_text a:hover,
+#secondary-content .bbccom_text a:focus,
+#travel #bbccom_sponsor_section_text,
+#bbccom_sponsor_section_news,
+#blq-main .bbccom_adsense h3 a {
+    color:#505050;
+    font:bold 10px/23px helvetica,arial,sans-serif !important;
+    letter-spacing:0 !important;
+    text-transform:uppercase;
+    background-color: transparent;   /* Resolves mouse-over, background change issue */
+    background-image: none;
+}
+
+#travel .bbccom_adsense h4 a,
+#travel .bbccom_adsense h4 p a {
+    color:#000000;
+    font:bold 13px/13px arial,helvetica,sans-serif !important;
+    text-transform:none;
+}
+#travel #blq-main .bbccom_adsense p {
+    color:#505050;
+}
+#travel #blq-main .bbccom_adsense p a {
+    color:#78b200;
+    text-transform:none;
+}
+#bbccom_sponsor_section_text,
+#bbccom_module_special-reports .bbccom_text,
+#bbccom_leaderboard_container .bbccom_text a,
+#bbccom_module_programme-breakout .bbccom_text,
+.news #header-wrapper #bbccom_sponsor_section .bbccom_text {
+    color:#fff;
+    text-decoration:none;
+}
+.bbccom_text {
+    text-align:right;
+}
+/* Remove #bbccom_module_range-most-popular_text from below for live and make sure its ok */
+.bbccom_text,
+#bbccom_module_range-most-popular_text {
+    text-align:right;
+}
+.bbccom_sponsor .bbccom_text {
+    padding-right:3px;
+    display:inline;
+}
+.adimg{
+    border-style:none;
+}
+/* END BBCCOM base */
+
+/* CREAM OVERRIDES */
+.news .bbccom-advert {
+    margin-top:-1px;
+}
+.bbccom_slot_mpu .more-galleries li.last-child {
+    display:none;
+}
+.news .partner_buttons_2cols {
+    padding:10px 23px 0;
+    width:288px;
+}
+.news #bbccom_partner_button1 {
+    width:334px;
+}
+
+/* Correspondents page */
+.news .correspondent-bbccom #bbccom_leaderboard {
+    margin-bottom: 18px;
+}
+
+/* Adsense */
+.news .bbccom_adsense,
+.blogs .bbccom_adsense{
+    background-color:#fff;
+    border:1px solid #999;
+}
+.news #blq-main .bbccom_adsense h3 a,
+.news #blq-main .bbccom_adsense p,
+.blogs #blq-main .bbccom_adsense h3 a,
+.blogs #blq-main .bbccom_adsense p {
+    color:#505050;
+}
+.news #blq-main .bbccom_adsense a,
+.blogs #blq-main .bbccom_adsense a {
+    color:#174f82;
+}
+/* END CREAM OVERRIDES */
+
+/* TRAVEL OVERRIDES */
+#travel #bbccom_leaderboard,
+#travel #bbccom_leaderboard_bottom,
+#travel #bbccom_mpu,
+#travel #bbccom_mpu_bottom,
+#travel #bbccom_button,
+#travel #bbccom_promo_feature_1 {
+    background-color:#e8e8e8;
+}
+#travel .gallery #bbccom_leaderboard,
+#travel .gallery #bbccom_mpu,
+#travel .gallery #bbccom_button,
+#travel .gallery #bbccom_promo_feature_1 {
+    background-color:#212121;
+}
+#travel .gallery .bbccom_text a {
+    color:#878787;
+}
+#travel #bbccom_leaderboard,
+#travel #bbccom_leaderboard_bottom {
+    line-height:1;
+    padding:0 8px 8px;
+}
+#travel #bbccom_mpu,
+#travel #bbccom_mpu_bottom {
+    margin-bottom:20px;
+    padding:0 8px;
+    text-align:center;
+}
+.bbccom_slot_mpu336 #promo-content #bbccom_mpu {
+    padding:0;
+}
+#travel.bbccom_slot_mpu336  #bbccom_mpu {
+    width:336px;
+}
+/* Remove after update for travel goes live */
+.bbccom_slot_xxl .feature #promo-content div {
+    margin:0 auto;
+}
+#travel #bbccom_button {
+    line-height:1;
+    padding:0 8px 8px;
+}
+#travel #bbccom_button a {
+    display:inline-block;
+    line-height:1;
+}
+#travel #bbccom_sponsor_section {
+    bottom:22px;
+    top:auto;
+    right:0;
+}
+#travel #promo-content .bbccom_text {
+    padding-right:8px;
+}
+#travel .promo_feature {
+    line-height:1;
+    margin-bottom:24px;
+    width:336px;
+}
+/* Adsense */
+#travel #blq-main .bbccom_adsense {
+    background-color:#e8e8e8;
+}
+#travel #blq-main .bbccom_adsense h3 {
+    border-bottom:1px solid #ABABAB;
+    margin:0 8px;
+    padding:0;
+    text-align:right;
+}
+#travel #bbccom_adsense_mpu {
+    margin-top:0;
+}
+/* END TRAVEL OVERRIDES */
+
+/*
+	AD Specific
+	Should follow the page flow
+*/
+/* LEADERBOARD */
+#bbccom_leaderboard,
+#bbccom_leaderboard_below_nav,
+#bbccom_leaderboard_bottom {
+    width:728px;
+    padding:0 2px;
+    margin:0 auto;
+}
+#bbccom_leaderboard_container {
+    background-color:#484848;
+}
+#bbccom_leaderboard_container #bbccom_leaderboard {
+    padding-bottom:8px;
+}
+/* 970 Leaderboards */
+.bbccom_slot_leaderboard970 #bbccom_leaderboard,
+.bbccom_slot_leaderboard97066 #bbccom_leaderboard,
+.bbccom_slot_leaderboard97090 #bbccom_leaderboard,
+.bbccom_slot_leaderboard_bottom970 #bbccom_leaderboard_bottom,
+.bbccom_slot_leaderboard_bottom97066 #bbccom_leaderboard_bottom,
+.bbccom_slot_leaderboard_bottom97090 #bbccom_leaderboard_bottom {
+    height:auto;
+    padding:0 3px;
+    width:auto;
+}
+.bbccom_slot_leaderboard970 #blq-main #bbccom_leaderboard,
+.bbccom_slot_leaderboard97066 #blq-main #bbccom_leaderboard,
+.bbccom_slot_leaderboard97090 #blq-main #bbccom_leaderboard,
+.bbccom_slot_leaderboard_bottom970 #blq-main #bbccom_leaderboard_bottom,
+.bbccom_slot_leaderboard_bottom97066 #blq-main #bbccom_leaderboard_bottom,
+.bbccom_slot_leaderboard_bottom97090 #blq-main #bbccom_leaderboard_bottom {
+    padding:0 3px;
+}
+/* END LEADERBOARD */
+
+/* BUTTON */
+#bbccom_button .bbccom_text {
+    text-align:right;
+}
+#bbccom_button {
+    border:0 none;
+    float:left;
+    padding:0 0 8px 20px;
+    width:120px;
+}
+.lhs #bbccom_button a:link,
+.lhs #bbccom_button a:visited,
+.lhs #bbccom_button a:active {
+    padding:0;
+}
+/* END BUTTON */
+
+/* VIDEO COMPANION AD */
+#blq-main .companion_v4 {
+    height:60px;
+    padding-top:10px;
+    width:auto;
+}
+.bbccom_companion {
+    height:0px;
+    margin:auto;
+    overflow:hidden;
+    width:300px;
+}
+.bbccom_companion div {
+    height:auto;
+    float:right;
+    padding:0;
+}
+#blq-main .companion_v4 div.bbccom_companion_text {
+    width:auto;
+}
+#story-body .companion_v4 {
+    padding-bottom:10px;
+}
+.videoInStoryA .bbccom_visibility_show,
+.videoInStoryB .bbccom_visibility_show {
+    height:auto;
+    margin-top:8px;
+}
+/* New slide */
+#blq-main .companion_parent{
+    background-color:#D5D5D5;
+    height:auto;
+    margin-top:-3px;
+    padding-bottom:10px;
+    text-align:center;
+}
+#blq-main .companion_parent .bbccom_companion_text{
+    display:block;
+    float:none;
+    height:auto;
+    margin:0 auto;
+    padding:0;
+    text-align:right;
+    width:300px;
+}
+#blq-main .companion_parent .bbccom_companion_text a{
+    background-image:none;
+    float:none;
+    padding:0;
+}
+#blq-main .companion_parent div{
+    height:60px;
+}
+#blq-main .companion_parent div.bbccom_companion_text{
+    height:24px;
+}
+/* END VIDEO COMPANION AD */
+
+
+/* SPONSOR */
+/* TODO: Refactor - KB 230310 */
+#bbccom_sponsor_section {
+    background:none;
+    height:31px;
+    position:absolute;
+    right:85px;
+    text-align:right;
+    top:27px;
+    width:auto;
+}
+/* Sports Banner Default to allow for Watch button */
+.sportbanner #bbccom_sponsor_section {
+    padding:0 28px 0 0;
+    right:-11px;
+    top:-2px;
+}
+.sportbanner #bbccom_sponsor_section_text {
+    float:left;
+    margin-top:15px;
+}
+/* Olympic Dreams Banner override */
+.wodban #bbccom_sponsor_section {
+    padding:0 13px 0 0;
+    right:0;
+    top:-3px;
+}
+#bbccom_sponsor_section div {
+    background:none;
+    display:inline-block;
+    float:none;
+    margin:0;
+    padding:0;
+}
+#bbccom_sponsor_section_text {
+    width:130px;
+}
+#bbccom_sponsor_section_image,
+#bbccom_sponsor_section_image a {
+    width:96px;
+}
+#bbccom_sponsor_section_image {
+    padding-left:10px;
+}
+/* Click overwrite */
+.banner #bbccom_sponsor_section div {
+    height:auto;
+}
+/* Cream Section Sponsor */
+.news #header-wrapper #bbccom_sponsor_section {
+    left:auto;
+    right:0;
+    top:15px;
+    width:205px;
+}
+.news #header-wrapper #bbccom_sponsor_section .bbccom_text {
+    float:left;
+    line-height:38px !important;
+}
+/* All Cream Sponsor Divs */
+.bbccom_sponsor {
+    height:31px;
+}
+/* News title old site */
+#bbccom_sponsor_section_news {
+    float:left;
+    margin:0 0 0 10px;
+}
+#bbccom_sponsor_section_news p {
+    float:left;
+    margin:20px 5px 0 0;
+}
+#bbccom_sponsor_section_news img {
+    display:block;
+}
+/* Cream Photo Gallery */
+.news .photo-gallery #bbccom_sponsor_section {
+    left:auto;
+    right:0;
+    top:42px;
+}
+.news .photo-gallery #bbccom_sponsor_section .bbccom_text {
+    float:left;
+    padding-top:3px;
+}
+.news .photo-gallery #bbccom_sponsor_section a {
+    margin-left:3px;
+}
+
+/* Sports Formula 1 Header sponsor override */
+.header-formula-1 #bbccom_sponsor_section {
+	margin-top: -1px !important;
+	margin-right: 0 !important;
+	padding: 4px 4px 3px;
+    background: #ffffff;
+}
+
+/* END SPONSOR */
+
+/* SHARE SPONSORSHIP */
+#socialBookMarks iframe {
+    border:none;
+}
+/* END SHARE SPONSORSHIP */
+
+/* BOOKMARK SPONSORSHIP CREAM */
+#bbccom_module_page-bookmark-links {
+    height:31px;
+    position:absolute;
+    right:0;
+    text-align:right;
+    top:-10px;
+    width:230px;
+}
+/* BBCCOM-579 - increasing top margin of sponsorship*/
+.story-related {
+    margin: 0 0 24px !important;
+}
+/* END BOOKMARK SPONSORSHIP CREAM */
+
+
+/* PROMOTIONAL SPONSORSHIP CREAM */
+#bbccom_module_hyper-promotional-content {
+    background: #d1700e;
+    border-top: 1px solid #fff;
+    padding: 8px;
+    text-align: right;
+    position: static;
+    margin-top: 0px;  /* Fix for CPSOUT-795 */
+}
+/* END PROMOTIONAL SPONSORSHIP CREAM */
+
+/* SPECIAL REPORTS */
+/* body tag */
+.bbccom_slot_module_special-reports .special-reports .top-report {
+    padding-bottom: 4em;
+}
+.bbccom_slot_module_special-reports .more-special-reports {
+    display: none;
+}
+/* end body tag */
+#bbccom_module_special-reports {
+    text-align: right;
+    min-height: 1px;
+    padding: 8px 8px 5px 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+/* END SPECIAL REPORTS */
+
+/* PRINT SPONSORSHIP */
+#bbccom_storyprintsponsorship {
+    overflow:auto;
+    border:1px solid #eee;
+    float:right;
+    margin:9px 0pt 29px 0;
+    width:251px;
+    padding:4px 0;
+}
+#bbccom_storyprintsponsorship p {
+    float:left;
+    font-size:0.8em;
+    padding:6px 0 6px 6px;
+    text-transform:uppercase;
+    margin-right:10px;
+}
+#bbccom_storyprintsponsorship div {
+    height:31px;
+}
+#bbccom_storyprintsponsorship a {
+    background-image:none;
+    margin:0;
+    padding:0;
+}
+#bbccom_storyprintsponsorship .bbccom_text {
+    display:none;
+}
+/* END PRINT SPONSORSHIP */
+
+/* MODULE SPONSORSHIP */
+#bbccom_module_most-popular,
+#bbccom_module_programme-breakout,
+#bbccom_module_range-most-popular,
+#bbccom_module_most-popular-category{
+    clear:both;
+    height:31px;
+    overflow:hidden;
+    padding-top:8px;
+    position:relative;
+    text-align:right;
+}
+/* Fix for CPSOUT-793 */
+.bbccom_slot_xxl #bbccom_module_programme-breakout {
+    float:right;
+    padding-bottom:8px;
+    width:336px;
+    /*
+        right:8px;
+        bottom:8px;
+        position:absolute;
+        width: 250px;
+    */
+}
+/* Fix for CPSOUT-809 */
+.bbccom_slot_xxl li.no-image #bbccom_module_programme-breakout {
+    right:auto;
+    bottom:auto;
+    position:relative;
+    width: auto;
+}
+/* Fix for CPSOUT-793, CPSOUT-809, CPSOUT-810 */
+.bbccom_slot_xxl.bbccom_slot_module_programme-breakout .container-programme-promotion ul.programme-breakout li.large-image {
+    /*
+        border-bottom:1px solid #FFFFFF;
+        padding:8px 8px 47px 344px;
+        width:144px;
+    */
+}
+/* END MODULE SPONSORSHIP */
+
+/* MARKET DATA */
+#bbccom_module_market-data-include {
+    background:#ededed;
+    border-top:1px solid #fff;
+    margin:-16px 0 16px 0;
+    padding:8px 8px 8px 0;
+    text-align:right;
+}
+/* END MARKET DATA */
+
+/* STUFF FOR CREAM TO REMOVE */
+#main-content .story-actions {
+    float:left;
+    width:468px;
+}
+/* END PRINT SPONSORSHIP */
+
+/* MPU */
+#bbccom_mpu,
+#bbccom_mpu_high,
+#bbccom_mpu_bottom {
+    border:0;
+    margin:0 auto;
+    width:300px;
+}
+/* Reset for Cream */
+.news #bbccom_mpu {
+    margin:-8px auto 13px;
+}
+.news .media-asset #bbccom_mpu {
+    margin-top:0;
+}
+.news #bbccom_mpu_high {
+    margin:-6px auto 13px;
+}
+.news #bbccom_mpu img,
+.news #bbccom_mpu_high img {
+    margin-bottom:-6px;
+}
+/* Reset for old sport */
+.wgreylinebottom #bbccom_mpu {
+    margin:-14px auto 11px;
+}
+td #bbccom_mpu {
+    margin-bottom:16px;
+}
+#main-content div#bbccom_mpu {
+    margin-right: 20px;
+}
+#main-content div#bbccom_adsense_middle {
+    border: 1px solid #999999;
+    width: auto;
+}
+/* Reset for homepage V3 */
+.blq_hp #bbccom_mpu {
+    margin:0;
+}
+/* Reset for photo gallery */
+#galothercontentbox #bbccom_mpu {
+    margin-top:-12px;
+}
+/* XXL MPU */
+.bbccom_slot_xxl #bbccom_mpu,
+.bbccom_slot_xxl #bbccom_mpu_high {
+    width:468px;
+    margin-left:15px;
+}
+/* Fixed Panel */
+.bbccom_slot_mpu336 #bbccom_mpu ,
+.bbccom_slot_mpu336 #bbccom_mpu_high {
+    width:auto;
+}
+/* MPU Skyscraper */
+.bbccom_slot_mpu_skyscraper #bbccom_mpu,
+.bbccom_slot_mpu_skyscraper #bbccom_mpu_high {
+    height:644px;
+    width:160px;
+}
+
+/* BBCCOM-962 Fix skyscraper alignment */
+.bbccom_slot_mpu_skyscraper #main-content #bbccom_mpu,
+.bbccom_slot_mpu_skyscraper #main-content #bbccom_mpu_high {
+    margin-right: 88px;
+}
+
+/* NEWS-676 Increase bottom margin of bottom MPU on News */
+.news #bbccom_mpu_bottom {
+    margin-bottom: 9px
+}
+
+.mpu_v4{
+    margin:0 0 20px 3px;
+}
+#bbccom_adsense_mpu,
+#secondary-content #bbccom_adsense_mpu{
+    margin-top:10px;
+}
+#secondary-content #bbccom_mpu, /* Cream Release B */
+#secondary-content #bbccom_mpu div,
+#secondary-content #bbccom_mpu_high,
+#secondary-content #bbccom_mpu_high div,
+#secondary-content #bbccom_adsense_mpu,
+#secondary-content #bbccom_adsense_mpu div {
+    border-bottom: none;
+}
+#secondary-content #bbccom_mpu, /* Cream Release B */
+#secondary-content #bbccom_mpu div,
+#secondary-content #bbccom_mpu_high,
+#secondary-content #bbccom_mpu_high div {
+    border-bottom: none;
+    padding-bottom:0;
+    width:300px;
+}
+/* END MPU */
+
+/* SKYSCRAPER */
+#bbccom_skyscraper{
+    position:absolute;
+    border:0;
+    width:160px;
+    height:600px;
+    text-align:center;
+}
+.skyscraper_v4{
+    top:156px;
+    left:1000px;
+}
+.skyscraper_v3_5{
+    top:104px;
+    left:815px;
+}
+.skyscraper_v3{
+    top:256px;
+    left:770px;
+}
+/* END SKYSCRAPER */
+
+/* BOTTOM */
+#bbccom_bottom{
+    height:71px;
+    width:470px;
+}
+.bottom_v3,
+.bottom_v3_5{
+    margin:0 0 0 215px;
+    padding:8px 0;
+}
+/* END BOTTOM */
+
+/* NEW ADSENSE */
+#bbccom_adsense_mpu,
+#bbccom_adsense_middle {
+    display:inline-block;
+    font-family:arial,sans-serif;
+}
+#bbccom_adsense_mpu {
+    margin-bottom:10px;
+}
+#bbccom_adsense_middle {
+    margin-bottom:20px;
+    width:466px;
+}
+#main-content #bbccom_adsense_middle{
+    margin-bottom:20px;
+    margin-top:22px;
+}
+/* Cream */
+.bbccom_adsense h3,
+.bbccom_adsense h4 {
+    font-size:14px;
+}
+#blq-main .bbccom_adsense h3 {
+    padding:6px;
+}
+#blq-main .bbccom_adsense li {
+    background-image:none;
+    padding:6px;
+}
+#blq-main .bbccom_adsense h3 a,
+#blq-main .bbccom_adsense h4 a,
+#blq-main .bbccom_adsense p a {
+    background-image:none;
+}
+#blq-main .bbccom_adsense h3 a {
+    padding:0;
+    color:#555555;
+    font-weight:bold;
+}
+#blq-main .bbccom_adsense a {
+    border-bottom:none;
+    color:#174F82;
+}
+#blq-main .bbccom_adsense p {
+    color:#000000;
+    font-size:13px;
+    margin:0;
+    padding:0;
+}
+#blq-main .bbccom_adsense p a {
+    font-weight:normal;
+}
+#blq-main .adsense_mpu_weather_top {
+    margin-top:0;
+}
+.adsense_mpu_weather {
+    background-color:#fff;
+    width:296px;
+}
+/* NEW ADSENSE RESETS */
+.layout-block-a .bbccom_adsense {
+    width:462px;
+}
+.layout-block-a #bbccom_adsense_mpu {
+    margin-top:0;
+}
+#secondary-content .adsense_mpu li{
+    background-image:none;
+}
+/* END NEW ADSENSE */
+
+
+/* PARTNER BUTTONS */
+#bbccom_partner_button1 {
+    border:1px solid #EAEAEA;
+    /* float:left;  Removed BBCCOM-933 */
+    margin:35px 0 16px 0;
+    padding-top:10px;
+    position:relative;
+}
+#bbccom_partner_button1 a,
+#bbccom_partner_button1 iframe {
+    display:inline-block;
+    height:30px;
+    margin-left:31px;
+    padding-bottom:10px;
+    width:120px;
+}
+#bbccom_partner_button1 iframe {
+    padding-bottom: 0;
+}
+#bbccom_partner_button1 .partner_buttons_4cols a {
+    margin-left:27px;
+}
+#bbccom_partner_button1 .bbccom_text {
+    position:absolute;
+    right:0;
+    top:-26px;
+}
+/* Extend width */
+.bbccom_slot_xxl #bbccom_partner_button1 {
+    width:494px;
+}
+/* PATNER BUTTONS */
+/*
+	END AD Specific
+*/
+
+/* ???????????????????????? */
+.sportbanner {
+    position:relative;
+}
+#bbccom_bottom_adlabel {
+    color:#bbb;
+}
+#bbccom_leaderboard table,
+#bbccom_leaderboard tr,
+#bbccom_leaderboard td,
+#bbccom_leaderboard th {
+    margin:0;
+    padding:0
+}
+/* ???????????????????????? */
+
+/* Journalism commonwealth games */
+.bbccom_slot_sponsor_section div.cg-2010-section {
+    background:url("/sol/shared/img/v4/commonwealth_games_2010/cg_bbccom_banner_sprite2.png") no-repeat scroll 160px 0 transparent;
+}
+.cg-2010-section .sportbanner #bbccom_sponsor_section {
+    padding:0 16px 0 0;
+    right:0;
+}
+.cg-2010-section #bbccom_sponsor_section_text {
+    color:#000;
+    float:left;
+    margin-top:15px;
+}
+/* END Journalism commonwealth games */
+
+/* News RSS Location when Sponsorship present */
+.bbccom_slot_sponsor_section a#rss-alternative {
+    margin-right: 340px;
+}
+/* END News RSS Location when Sponsorship present */
+
+/* Forge World Cup */
+.bbccom_slot_sponsor_section #fixturesLink {
+    background-image:none;
+    float:left;
+    line-height:1.3em;
+    margin-left:10px;
+}
+.bbccom_slot_sponsor_section .world-cup-2010-section .athleticsbg {
+    margin-top:65px;
+}
+.world-cup-2010-section #bbccom_mpu {
+    margin-bottom:20px;
+}
+.bbccom_slot_sponsor_section .world-cup-2010-section .contentwrapper,
+.bbccom_slot_sponsor_section .world-cup-2010-section .contentwrapperwide {
+    padding:32px 0 0 0;
+}
+.world-cup-2010-section #bbccom_sponsor_section {
+    color:#505050;
+    left:auto;
+    line-height:55px;
+    right:14px;
+    top:118px;
+    width:230px;
+}
+.world-cup-2010-section #bbccom_sponsor_section div {
+    float:left;
+    line-height:53px;
+}
+.world-cup-2010-section #bbccom_sponsor_section a {
+    left:0;
+    position:relative;
+    top:0;
+    width:100px;
+}
+/* END Forge World Cup */
+
+/* Forge Metadata Winter Olympics */
+.bbccom_slot_mpu div.f1-winter-olympics-2010 #bbccom_mpu{
+    padding-bottom:29px;
+}
+div.f1-winter-olympics-2010 #bbccom_sponsor_section{
+    left:531px;
+    top:21px;
+    width:260px;
+}
+div.f1-winter-olympics-2010 #bbccom_sponsor_section div{
+    float:left;
+}
+div.f1-winter-olympics-2010 #bbccom_sponsor_section_text{
+    padding-top:6px;
+}
+div.f1-winter-olympics-2010 #bbccom_sponsor_section_image{
+    position:relative;
+    width:100px;
+}
+div.f1-winter-olympics-2010 .sportbanner div #bbccom_sponsor_section_image a{
+    left:0;
+    top:0;
+    width:100px;
+}
+/* END Forge Metadata Winter Olympics */
+
+/* TODO: Whats this for - KB 230310 */
+.embedvideo .latestinfo p {
+    margin-top:388px;
+}
+
+/* TODO: USED ON V2 Homepage(Remove when switch to V3 - KB 230310 */
+/* Homepage V2 */
+.i #bbccom_leaderboard_adlabel {
+    color:#fff;
+}
+/* END Homepage V2 */
+
+/* Homepage V3 */
+#ad,
+#ad .container {
+    background:transparent;
+}
+/* GR - override the corners added for modules*/
+/* Module header sponsorship styling */
+div.contentBlock a.headerSponsor {
+    display:block;
+    font-size:0.667em;
+    font-weight:normal;
+    height:30px;
+    padding:5px 5px 5px 40px;
+    background-color:#EFEDED;
+}
+div.contentBlock a.headerSponsor img {
+    float:left;
+}
+div.contentBlock a.headerSponsor span {
+    float:left;
+    line-height:26px;
+    margin-right:5px;
+}
+.moduleAdvertContent {
+    height:31px;
+    padding:6px 10px;
+    cursor:default;
+}
+.moduleAdvertContent a,
+.moduleAdvertContent a img {
+    float:left;
+}
+div.bbccom_module_adlabel{
+    color:#666;
+    float:left;
+    font-size:0.8em;
+    margin:6px 10px 0 0;
+    width:180px;
+}
+#bbccom_halfbanner{
+    border-top:1px solid #DBDBDB;
+    text-align:center;
+}
+div.bbccom_halfbanner_adlabel {
+    color:#666;
+    font-size:0.8em;
+    margin:6px 10px 0 0;
+    text-align:center;
+    width:300px;
+}
+.bbccom_halfbanner_image {
+    padding:5px 0 10px 0;
+}
+
+/* Advert related layout modifications */
+#international .colB {
+    min-height: 250px;
+    /* Make sure the advert column is always at least 250px high so the layout can be flexible */
+    height: auto;
+    padding-top: 0;
+}
+.blq-js #international.bbccom_slot_mpu .colB {
+    height:auto;
+    padding-top: 7px;
+}
+/* We don't need the top padding on the advert column when no advert is displayed */
+.blq-js #international.bbcdotcomAdvertsResetMpu .colB {
+    padding-top: 0;
+    height:250px;
+}
+/* If adverts are enabled make room for the MPU */
+.blq-js .bbccom_slot_mpu .colE{
+    margin-top: 0 !important;
+}
+/* Adverts enabled but the MPU is not showing, pull the third column back up */
+.blq-js #international.bbcdotcomAdvertsResetMpu .colE {
+    margin-top: -250px;
+}
+.advert{
+    margin-left: 2px;
+}
+.front-page .advert{
+    margin:0 0 3px 2px;
+}
+.bbcdotcomAdvertsResetMpu #bbccom_mpu {
+    display:none;
+}
+/* Don't believe the following is needed but included it here incase, its removed in build process
+.advert .moduleSponsorship {
+	line-height:50px;
+	height:50px;
+	text-align:center;
+	background:#200;
+	text-transform:uppercase;
+	margin: 0;
+}
+*/
+/* Homepage leaderboard background color */
+.skylightTheme #bbccom_leaderboard_container {
+    background-color: #1778B3;
+}
+.doveTheme #bbccom_leaderboard_container {
+    background-color: #5B688F;
+}
+.tealTheme #bbccom_leaderboard_container {
+    background-color: #2383A3;
+}
+.aquaTheme #bbccom_leaderboard_container {
+    background-color: #158979;
+}
+.greenTheme #bbccom_leaderboard_container {
+    background-color: #5D891B;
+}
+.violetTheme #bbccom_leaderboard_container {
+    background-color: #6A5789;
+}
+.purpleTheme #bbccom_leaderboard_container {
+    background-color: #823892;
+}
+.pinkTheme #bbccom_leaderboard_container {
+    background-color: #9D1767;
+}
+.oliveTheme #bbccom_leaderboard_container {
+    background-color: #7C7854;
+}
+.suedeTheme #bbccom_leaderboard_container {
+    background-color: #695C4A;
+}
+.redTheme #bbccom_leaderboard_container {
+    background-color: #9E2C1D;
+}
+.orangeTheme #bbccom_leaderboard_container {
+    background-color: #C55F16;
+}
+.blackTheme #bbccom_leaderboard_container {
+    background-color: #3F3F3F;
+}
+/* END Homepage V3 */
+
+/* Homepage V3 Lonely Planet Styles */
+.module h2 a.headerSponsor{
+    position:absolute;
+    right:30px;
+    top:0px;
+    width:auto;
+}
+.module h2 a.headerSponsor {
+    display:block;
+    font-size:0.667em;
+    font-weight:normal;
+    height:30px;
+    margin:5px 0 0;
+}
+.module h2 a.headerSponsor span {
+    float:left;
+    line-height:26px;
+    margin-right:5px;
+}
+.module h2 a.headerSponsor img {
+    float:left;
+}
+/* END Homepage V3 Lonely Planet Styles */
+
+/* Blogs */
+.blogs #bbccom_mpu,
+.blogs #bbccom_partner_button1,
+.blogs #bbccom_adsense_mpu{
+    float:left;
+}
+.blogs #bbccom_partner_button1{
+    margin:14px 0;
+}
+.blogs #bbccom_mpu{
+    margin-bottom:14px;
+}
+/* Blogs link resets */
+#bbccom_leaderboard_adlabel.bbccom_text a,
+.blogs #content #bbccom_mpu_adlabel a {
+    color:#666;
+}
+.blogs .adsense_mpu{
+    font-size:1em;
+}
+.blogs #content .adsensetitle a:link {
+    color:#555;
+}
+.blogs #content .adsenselabel a:link{
+    font-size:1.1em;
+}
+.blogs #content .adsenselabel a:link,
+.blogs #content .adsenseurl a:link{
+    color:#006;
+}
+.blogs #content .adsensead span{
+    line-height:1.4em;
+}
+/* Blogs sponsor defaults */
+.blogs #bbccom_sponsor_section {
+    width:auto;
+    top:20px;
+}
+.blogs #bbccom_sponsor_section_text {
+    width:auto;
+    font-size:0.8em;
+    line-height:31px;
+}
+.blogs #bbccom_sponsor_section_image {
+    width:auto;
+}
+.blogs #bbccom_sponsor_section_text,
+.blogs #bbccom_sponsor_section_image {
+    float:left;
+    margin-left:10px;
+}
+/* END Blogs */
+
+/** BBCCOM-98: Weather fix for sponsorship */
+#blq-weather-header #bbccom_sponsor_section {
+    top:-2px;
+    right:14px;
+    display:block;
+}
+#blq-weather-header #bbccom_sponsor_section div {
+    display:block;
+}
+#blq-weather-header #bbccom_sponsor_section_text {
+    text-align:right;
+}
+#blq-weather-header #bbccom_sponsor_section_image {
+    width:auto;
+}
+
+/* New Weather site ---------- */
+
+/* Leaderboard */
+.bbc-weather #bbccom_leaderboard_container {
+    background-color: #fff;
+}
+
+.bbc-weather #bbccom_leaderboard_container #bbccom_leaderboard .bbccom_text a {
+    color: #666;
+    text-transform: none;
+}
+
+.bbc-weather #bbccom_sponsor_section {
+    right: 0;
+    top: 65px;
+}
+
+.bbc-weather #bbccom_mpu {
+    margin-bottom: 8px;
+}
+
+.bbc-weather .adsense_mpu {
+    border: 1px solid #999;
+}
+
+/** END Weather */
+
+/** START Interstitial */
+/*#bbccom_int_placeholder {
+    left:0;
+    position:absolute;
+    top:-40px;
+    z-index:10000;
+}*/
+.bbccom_slot_interstitial #blq-acc,
+.bbccom_slot_interstitial #blq-mast {
+    display:none !important;
+}
+.bbccom_slot_interstitial {
+    overflow:hidden;
+}
+.bbccom_slot_interstitial_300x600 #bbccom_int {
+    width:300px;
+}
+#bbccom_int_container {
+    width:100%;
+    text-align:center;
+    height:5000px;
+    left:0;
+    position:absolute;
+    top:-40px;
+    z-index:10000;
+}
+#bbccom_int_outer {
+    top:0;
+    z-index:9999;
+    background: url('http://www.bbc.co.uk/bbc.com/images/interstitial/header.gif') #ddd no-repeat;
+    height:100% !important;
+    height:4000px;
+}
+#bbccom_int_inner {
+    width:976px;
+}
+#bbccom_int_head {
+    text-align:right;
+    padding:70px 10px 0 0;
+}
+#bbccom_int_link {
+    font-family:arial,sans-serif;
+    color:black;
+    font-size:0.8em;
+    font-weight:bold;
+    text-decoration:none;
+    cursor:pointer;
+    background: url('http://www.bbc.co.uk/bbc.com/images/interstitial/arrow.gif') transparent right center no-repeat;
+    padding-right: 14px;
+}
+#bbccom_int {
+    margin:0 auto;
+    padding-top:20px;
+    width:640px;
+}
+#travel #bbccom_int_outer {
+    background: url('http://www.bbc.co.uk/bbc.com/images/interstitial/header_travel.gif') #ddd no-repeat;
+}
+/** END Interstitial */
+
+/**
+ * PULSE Survey
+*/
+/* Homepage being moved to international style.css */
+.blq_hp .pulse-pop {
+    top:103px;
+}
+.bbccom_slot_leaderboard .pulse-pop {
+    top:232px;
+}
+.bbccom_slot_leaderboard97066 .pulse-pop {
+    top:200px;
+}
+.bbccom_slot_leaderboard97090 .pulse-pop {
+    top:224px;
+}
+/* News */
+.news #blq-pre-mast .pulse-pop {
+    left:700px;
+    top:300px;
+}
+/* Sport */
+.centerbody #blq-pre-mast .pulse-pop {
+    left:700px;
+    top:300px;
+}
+/** END PULSE Survey */
+
+/* News share box sponsorship - BBCCOM-796 */
+.bbc-st-sharepanel ul.bbc-st-all {
+    margin-left: 16px !important;
+    border-bottom: 1px solid #fff;
+    overflow: hidden;
+    width: 275px;
+}
+
+.bbc-st-sharepanel ul.bbc-st-all li {
+    padding-bottom: 13px;
+}
+
+.bbc-st-sharepanel .panel-bd ul.bbc-st-all li a {
+    margin: 0 10px 0 11px !important;
+}
+
+.bbc-st-sharepanel .panel-ft {
+    padding: 0 16px 10px 0;
+    width: 295px !important;
+}
+
+/*
+ * HOMEPAGE-2889 && HOMEPAGE-3350 - Temporary
+ * To be removed after deployment to live on Monday 20/9/10 .
+*/
+
+/* Pull the third column up by the height of the MPU (by default) */
+.blq-js #international .colB {
+    padding-top: 0;
+    height:280px;
+}
+/* Adverts enabled but the MPU is not showing, pull the third column back up */
+.blq-js #international .colE {
+    margin-top: -280px;
+}
+/* Fix BBCCOM-673 for asia story, will need to re-enable */
+#blq-main .news .front-page .bbccom_companion {
+    display: none;
+}
+/* End temporary fix */
+
+
+/*
+ * London 2012 Overrides (http://www.bbc.co.uk/2012)
+*/
+.london2012 #bbccom_mpu,
+.london2012 #bbccom_mpu_high{
+    margin-bottom: 20px;
+}
+.london2012 .advert{
+    margin-left: 0px;
+}
+.london2012 #bbccom_module_hyper-promotional-content{
+    background-color: #006699;
+}
+.london2012 .bbccom_adsense{
+    border: 1px solid #999999;
+    width: 621px;
+}
+.london2012 #bbccom_sponsor_section{
+    display: none;
+}
+
+/*
+ * BBCCOM-910 && BBCCOM-921 Adding overrides for public service emp.css for video in indexes
+*/
+.videoInStoryA div.bbccom_companion_text,
+.videoInStoryB div.bbccom_companion_text,
+.videoInIndexB div.bbccom_companion_text {
+    padding-top:0px;
+    height:auto;
+}
+
+/*
+ * Sports Refresh XXL - BBCCOM-1017
+*/
+.bbccom_slot_xxl #main-content .layout-block-a .story-image,
+.bbccom_slot_xxl .landscape #lead img {
+    width: 480px;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+.bbccom_slot_xxl #storypage-aside #bbccom_mpu,
+.bbccom_slot_xxl #storypage-aside #bbccom_mpu_high {
+    margin-left: 0px;
+}
+
+/*
+ * BBCCOM-1141 Sports Refresh ad styling
+*/
+
+/* 88x31 Sponsorships ---------- */
+
+/* In yellow page header */
+.sport #header-wrapper .bbccom_sponsor {
+    float: right;
+    margin: 3px 4px 0 0;
+    position: static;
+}
+
+/* Full width tables (only league tables have sponsorship) */
+.sport .full-table-wide .table-header {
+    height: 25px;
+    padding-top: 14px;
+}
+
+.sport .full-table-wide .table-header .bbccom_sponsor {
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    margin: 0;
+}
+
+/* Photo gallery pages */
+.sport .photo-gallery {
+    position: relative;
+}
+
+.sport .photo-gallery h1 {
+    float: left;
+}
+
+.sport .photo-gallery #bbccom_sponsor_section {
+    position: static;
+    float: right;
+    margin: 4px 8px 0 0;
+}
+
+/* Results, Fixtures and Live Scores pages */
+.sport .stats #bbccom_sponsor_results,
+.sport .stats #bbccom_sponsor_fixtures,
+.sport .stats #bbccom_sponsor_live-scores {
+    float: right;
+}
+.sport .stats #bbccom_sponsor_results,
+.sport .stats #bbccom_sponsor_fixtures {
+    margin: 1px 352px 0 0;
+}
+.sport .stats #bbccom_sponsor_live-scores {
+    margin: 31px 352px 0 0;
+}
+
+/* Competition index pages */
+.sport .index {
+    position: relative;
+}
+
+.sport .index .bbccom_sponsor {
+    position: absolute;
+    top: 13px;
+    right: 352px;
+}
+
+/* Team page sub-section */
+.sport .index #bbccom_sponsor_subsection {
+    margin-top: 18px;
+}
+
+/* Share tools sponsorship ---------- */
+.sport .live-scores-share-tools .bbccom_sponsor,
+.sport .share-tools-container #bbccom_module_page-bookmark-links {
+    float: right;
+    margin: -17px 0 0;
+    position: static;
+}
+
+.sport .share-tools-container #bbccom_module_page-bookmark-links .bbccom_text {
+    float: left;
+    padding: 4px 0 0 25px;
+}
+
+/* In photo gallery pages */
+.sport .photo-gallery .share-tools-bottombar #bbccom_module_page-bookmark-links {
+    top: 3px;
+    right: 16px;
+}
+
+/* In bottom bar */
+.sport .share-tools-bottombar {
+    height: auto;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.sport .share-tools-bottombar .share-tools-container,
+.sport .share-tools-bottombar .share-tools-container .share-tools-bottombar {
+    float: none;
+}
+
+.sport .share-tools-bottombar .share-tools-container #bbccom_module_page-bookmark-links .bbccom_text {
+    padding: 16px 0 0 25px;
+}
+
+/* On gallery page */
+.sport #page-bookmark-links-foot #bbccom_module_page-bookmark-links {
+    float: right;
+    position: static;
+    margin-right: 8px;
+}
+
+/* Sidebar ---------- */
+.sport #indexpage-aside .bbccom_sponsor {
+    margin-right: 12px;
+    text-align: right;
+    position: static;
+    padding-bottom: 12px;
+}
+
+.sport .stats-aside .bbccom_sponsor {
+    float: none;
+    padding-right: 10px;
+    margin: 0 0 10px;
+    text-align: right;
+}
+
+.sport .stats-aside .bbccom_sponsor .bbccom_text {
+    margin: 2px 0 0 120px;
+}
+
+/* Elsewhere module */
+.sport #bbccom_module_hyper-promotional-content {
+    background-color: #f5f5f5;
+}
+
+.sport #bbccom_module_hyper-promotional-content .bbccom_text {
+    color: #505050;
+}
+
+/* 728x90 Leaderboard ---------- */
+.sport #bbccom_leaderboard {
+    margin-top: 8px;
+}
+
+/* 300x250 MPU ---------- */
+
+/* Standard MPU styling */
+.sport #bbccom_mpu {
+    margin-bottom: 14px;
+}
+
+/* Floated right in some cases */
+.sport #statspage-container #bbccom_mpu,
+.sport .stats #bbccom_mpu {
+    float: right;
+    margin: 0 18px 14px 0;
+}
+
+/* Prevent floating in some cases */
+.sport .stats .stats-aside #bbccom_mpu {
+    float: none;
+    margin-left: 18px;
+}
+
+/* Partner buttons ---------- */
+.sport #bbccom_partner_button1 {
+    overflow: hidden;
+    padding: 10px 5px 10px 0;
+    width: 315px;
+}
+
+/* "Advertising Partners" text */
+.sport #bbccom_partner_button1 .bbccom_text,
+.sport #bbccom_partner_button1 .bbccom_text_left {
+    position: static;
+    color: #505050;
+    font: bold 10px/23px Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 0 13px 0 30px;
+    text-align: right;
+}
+
+.sport #bbccom_partner_button1 .col1,
+.sport #bbccom_partner_button1 .col3 {
+    float: left;
+}
+
+.sport #bbccom_partner_button1 .col2,
+.sport #bbccom_partner_button1 .col4 {
+    float: right;
+    margin-right: 13px;
+}
+
+/* 336x280 Large rectangle ---------- */
+.bbccom_slot_mpu336.sport #statspage-container #bbccom_mpu {
+    margin-right: 0;
+}
+
+.bbccom_slot_mpu336.sport #statspage-container #bbccom_mpu .bbccom_text {
+    padding-right: 8px;
+}
+
+/* Skyscraper ---------- */
+.bbccom_slot_mpu_skyscraper.sport #statspage-container #bbccom_mpu {
+    float: none;
+    margin: auto;
+}
+
+/* Google AdSense ---------- */
+.sport #bbccom_adsense_mpu {
+    background-color: #efefef;
+}
+
+.sport #bbccom_adsense_mpu h3 {
+    text-align: right;
+    border-bottom: 1px solid #fdfdfd;
+    padding: 1px 7px 0 0;
+}
+
+.sport #bbccom_adsense_mpu h3 a {
+    color: #444;
+}
+
+.sport #bbccom_adsense_mpu h4 a {
+    font-weight: bold;
+    color: #1c1c1c;
+}
+
+.sport #bbccom_adsense_mpu a {
+    color: #1659b4;
+}
+
+/* Other sponsorships ---------- */
+.sport .accordion-wrapper {
+    overflow: hidden;
+}
+
+/* OS2012-719 Olympics 2012 styling work ---------- */
+
+/* MPU */
+.sos2012 #bbccom_mpu {
+    margin-bottom: 15px;
+}
+
+/* Partner buttons */
+.sos2012 #bbccom_partner_button1 {
+    overflow: hidden;
+    padding: 10px 5px 10px 0;
+}
+
+.sos2012 #bbccom_partner_button1 .bbccom_text {
+    position: static;
+    padding-right: 19px;
+}
+
+.sos2012 #bbccom_partner_button1 .col1 {
+    float: left;
+}
+
+.sos2012 #bbccom_partner_button1 .col2 {
+    float: right;
+    margin-right: 20px;
+}
+
+/* Google AdSense */
+.sos2012 #bbccom_adsense_middle {
+    margin-left: 10px;
+}
+
+.sos2012 #bbccom_adsense_mpu,
+.sos2012 #bbccom_adsense_middle {
+    background-color: #efefef;
+}
+
+.sos2012 #bbccom_adsense_mpu h3,
+.sos2012 #bbccom_adsense_middle h3 {
+    text-align: right;
+    border-bottom: 1px solid #fdfdfd;
+    padding: 1px 7px 0 0;
+}
+
+.sos2012 #bbccom_adsense_middle h3 {
+    padding: 1px 20px 0 0;
+}
+
+.sos2012 #bbccom_adsense_mpu h3 a,
+.sos2012 #bbccom_adsense_middle h3 a {
+    color: #444;
+}
+
+.sos2012 #bbccom_adsense_mpu h4 a,
+.sos2012 #bbccom_adsense_middle h4 a {
+    font-weight: bold;
+    color: #1c1c1c;
+}
+
+.sos2012 #bbccom_adsense_mpu a,
+.sos2012 #bbccom_adsense_middle a {
+    color: #1659b4;
+}
+
+/* bbccom custom branding BBCCOM-1155*/
+.bbccom_custom_branding {
+    margin: 14px 0 0 0;
+}
+
+/* IE9 > pinned site */
+#iePinnedSiteBar {
+	font-family: helvetica,arial,sans-serif !important;
+    background: none repeat scroll 0 0 #707070;
+    box-shadow: 0 5px 10px #CCCCCC;
+    color: #FFFFFF;
+    padding: 10px 0;
+    text-transform: uppercase !important;
+    width: 100%;
+	
+}
+#iePinnedSiteBar p {
+	color: #fff;
+	margin-bottom: 0 !important;
+	font-size: 16px !important;
+}
+
+#iePinnedSiteBar #iePinWrap { 
+	width: 960px; 
+	margin: 0 auto;
+	position: relative;
+}
+
+#iePinnedSiteBar #iePinWrap img { 
+	   cursor: move; 
+	   width: 32px; 
+	   height: 32px; 
+	   vertical-align: middle;
+}
+
+#iePinnedSiteBar #iePinClose {
+    color: #FFFFFF !important;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    font-weight: normal !important;
+    padding: 2px 24px 5px 0;
+    position: absolute;
+    right: 0;
+    text-decoration: none !important;
+    text-transform: capitalize !important;
+    top: 7px;
+}
+
+#iePinnedSiteBar #iePinClose span {
+	background: url("../img/close.png") no-repeat 0 0 transparent;
+	display: block;
+	height: 15px;
+	position: absolute;
+	right: 0;
+	top: 2px;
+	width: 15px;
+}
+
+#iePinnedSiteBar #iePinClose:hover { 
+	color: #ccc !important; 
+	text-decoration: none !important; 
+}
+
+#iePinnedSiteBar #iePinClose:hover span { 
+	background-position: -18px 0;
+}
