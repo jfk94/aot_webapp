@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget  xmlns="http://www.w3.org/ns/widgets"
+          xmlns:jil="http://www.jil.org/ns/widgets1.2"
+         xmlns:its="http://www.w3.org/2005/11/its"
+         id="http://jil.org/wid/d4f6d2abc71635f5520d7f0ae2053abc4fd15c91f5833d31f9091aa4870a81/Black_Jack"
+         version="01.00"
+         viewmodes="fullscreen,floating">
+    <jil:maximum_display_mode height="684" width="480"/>
+    <jil:access network="false" localfs="false" remote_scripts="false"/>
+    <jil:billing required="false"/>
+    <icon src="Icon.png"/>
+    <content src="BlackJack.html"/>
+    <name>Black Jack</name>
+    <description>A poker card game</description>
+    <author>JIL</author>
+</widget>

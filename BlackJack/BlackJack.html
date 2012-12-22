@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Black Jack</title>
+<link href="BlackJack.css" rel="stylesheet" type="text/css" /> 
+<script type="text/javascript" src="BlackJack.js"></script>
+<body onload="initScreen();initProgram();">
+	<div id="main" style="position: absolute; width: 480px; height: 684px; top: 0%; left: 0%; overflow: hidden;">
+			<img id="mainBGImage" src="images/bgbg.png" width="100%">
+			<div id="container" style="position: absolute; top: 0px; width: 100%; height: 65.35%; font-family: Arial;">
+				<img id="containerBGImage" width="100%" src="images/Blackjack_bg.png" style="position: absolute; top: 0%;">
+			</div>
+			
+			<div id="scoreDiv" style="width: 40.2%; height: 13.6%; position: absolute; top: 1%; left: 1%; font-size: 2em; color: #FBDB03; line-height: 1.1em; text-align: center;">
+				<img id="scoreBGImage" width="100%" src="images/score.png" style="position: absolute;">
+				<div id="dealerScores" style="position: absolute; top: 8%; left: 30%; width: 60%; height: 40%;">
+				</div>
+				<div id="playerScores" style="position: absolute; top: 50%; left: 30%; width: 60%; height: 40%;">
+				</div>
+			</div>
+			
+			<div id="MoneyDiv" style="width: 40.2%; height: 13.6%; position: absolute; top: 1%; left: 60%; color: #FBDB03; font-size: 2em; line-height: 1.2em; text-align: center;">
+				<img id="MoneyDivBGImage" src="images/money.png">
+				<div id="BankerMoney" style="position: absolute; top: 8%; left: 30%; width: 60%; height: 40%;"></div>
+				<div id="PlayerMoney" style="position: absolute; top: 50%; left: 30%; width: 60%; height: 40%;"></div>
+			</div>
+			<div id="dealer" style="width: 70%; height: 20%; position: absolute; top: 12%; left: 30%;">
+				<div id="dealerCards">
+				</div>
+			</div>
+			<div id="player" style="width: 70%; height: 20%; position: absolute; top: 32%; left: 30%;">
+				<div id="playerCards">
+				
+				</div>
+			</div>
+			<div id="bet" style = "position: absolute; top: 40%; left: 50%; width: 50%; height: 30%;">
+				<div id="bet1"  style="position: absolute; top: 50%; left: 0%; width: 30%; height: 34.5%; display: block;" onclick="changeBet('1')">
+					<img src="images/1.png" height="100%" style="position: absolute;">
+				</div>
+				<div id="bet5" style="position: absolute; top: 40%; left: 37%; width: 30%; height: 34.5%; display: block;" onclick="changeBet('5')">
+					<img src="images/5.png" height="100%" style="position: absolute;">
+				</div>
+				<div id="bet10" style="position: absolute; top: 20%; left: 68%; width: 30%; height: 34.5%; display: block;" onclick="changeBet('10')">
+					<img src="images/10.png" height="100%" style="position: absolute;">
+				</div>
+			</div>
+			<div id="betStack" style="position: absolute; top: 29%; left: 84%; width: 12%; height: 7.5%;">
+			</div>
+			
+			<div id="playerInvoke" style="position: absolute; top: 70%; width: 80%; left: 10%; height: 16.1%;">
+				<div id="Deal" style="display: none; position: absolute; left: 39%; width: 27%; height: 100%;" onclick="startGame();">
+					<img id = "DealImage" src="images/deal.png" height="100%">
+				</div>
+				<div id="playerHit" onclick = "playerHit();" style="position: absolute; left: 0%; top: 0%; display: none; width: 27%; height: 100%;" onclick = "playerHit();">
+					<img id="playerHitImage" src="images/hit.png" height="100%">
+				</div>
+				<div id="playerStand" onclick = "playerStand();" style="position: absolute; left: 39%; top: 0%; display: none; width: 27%; height: 100%;">
+					<img id="playerStandImage" src="images/stand.png" height="100%">
+				</div>
+				<div id="playerDouble" onclick = "playerDouble();" style="position: absolute; left: 78%; top: 0%; display: none; width: 27%; height: 100%;">
+					<img id="playerDoubleImage" src="images/double.png" height="100%">
+				</div>
+			</div>
+			
+			<div id="message" style="z-index: 99; display: none; width: 100%; height: 100%; position: absolute; top: 0%; left: 0%;">
+				<div id="messageContent" style="z-index: 99; width: 82.9%; height: 32.46%; position: absolute; top: 20%; left: 9%;"  onclick="closeMessage()">
+					<img id="messageBGImage" width="100%" src="images/message.png">
+					<div id="messageText" style="font-size: 1.4em; width: 80%; position: absolute; top: 30%; left: 10%; color: white; text-align: center; font-weight: bold;">You have not enough money.</div>
+					<img id="messageBtn" src="images/OK.png" width="20%" style="position: absolute; top: 80%; left: 40%;">
+				</div>
+			</div>
+			
+			<div id="showBackground" style="display: none; z-index: 10; width: 100%; height: 100%; position: absolute; top: 0%; left: 0%;">
+				<div id="InsuranceDialogDiv" style=" width: 82.9%; height: 32.46%; position: absolute; top: 20%; left: 9%; z-index: 11;">
+					<img id="messageBGImage" width="100%" src="images/message.png">
+					<span id="dialogMessage" style="font-size: 1.1em; width: 90%; position: absolute; top: 30%; left: 5%; color: white; text-align: center; font-weight: bold;">Do you want to buy the insurance?</span>
+					
+					<div id="YesBtn" style="width: 40%; height: 100%; z-index: 12; position: absolute; top: 0%; left: 10%;" onclick="playerInsurance();hideInsuranceDialog();">
+						<img src="images/yes.png" width="78%" style="position: absolute; top: 70%;">
+					</div>
+					<div id="NoBtn" style="width: 40%; height: 100%; z-index: 12; position: absolute; top: 0%; left: 60%;" onclick="passInsurance();hideInsuranceDialog();">
+						<img src="images/no.png" width="78%" style="position: absolute; top: 70%;">
+					</div>
+				</div>
+			</div>
+			
+	 	<div id="popup" style="position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; z-index: 100;" onclick="closePopup();">
+	 		<img src="images/popup.png" width = "83.33%" style="position: absolute; left: 8%; top: 20%;">
+	 	</div>
+	</div>
+	
+	
+	<div id="initialize" style="background-image: url(images/message.png); display: none;">
+		<div id="messageBtn" style="background-image: url(images/OK.png)">
+		<img src="images/Club_a.png">
+		<img src="images/Club_j.png">
+		<img src="images/Club_k.png">
+		<img src="images/Club_q.png">
+		<img src="images/Diamond_a.png">
+		<img src="images/Diamond_j.png">
+		<img src="images/Diamond_k.png">
+		<img src="images/Diamond_q.png">
+		<img src="images/Hearts_a.png">
+		<img src="images/Hearts_j.png">
+		<img src="images/Hearts_k.png">
+		<img src="images/Hearts_q.png">
+		<img src="images/spade_a.png">
+		<img src="images/spade_j.png">
+		<img src="images/spade_k.png">
+		<img src="images/spade_q.png">
+		<img src="images/yes.png">
+		<img src="images/no.png">
+		<img src="images/10x.png">
+		<img src="images/5x.png">
+		<img src="images/1x.png">
+		<img src="images/Club_10.png">
+		<img src="images/Hearts_10.png">
+		<img src="images/spade_10.png">
+		<img src="images/Diamond_10.png">
+		</div>
+	</div>
+</body>
+</html>
