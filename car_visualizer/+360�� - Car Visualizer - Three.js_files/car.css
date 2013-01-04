@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================================================
+by Ivan Moreno http://www.thefloatingwall.com - http://www.plus360degrees.com
+
+please avoid the fact of my usage of paddings and marings to positioned the divs ;)
+=====================================================================================*/
+body {
+	color:#eee;
+	font-family:'Cabin Condensed', sans-serif;
+	font-size:11px;
+	text-align:center;
+	margin: 0px;
+	overflow: hidden;
+	background-color:#000;
+}
+
+body a {
+	color:#eee;
+	text-decoration:none;
+}
+
+body a:hover, .current {
+	color:#900;
+	text-decoration:none;
+}
+
+#body-picker-canvas, #rims-picker-canvas {
+	margin-left:-30px;
+	margin-top:6px;
+	width:264px;
+	height:86px;
+	cursor:pointer;
+	float:left;
+}
+
+#top-menu-left {
+	position:fixed;
+	width:160px;
+	height:18px;
+	padding-top:4px;
+	margin-left:10px;
+	margin-top:10px;
+	background-color:#272727;
+}
+
+#top-menu-right {
+	position:fixed;
+	width:236px;
+	height:18px;
+	padding-top:3px;
+	margin-right:10px;
+	margin-top:10px;
+	background-color:#272727;
+	right:0px;	
+}
+
+#top-menu-left a, #top-menu-right a {
+	cursor:pointer;
+}
+
+.share-icons {
+	float:right;
+	margin-right:10px;
+	margin-top:1px;	
+}
+
+#tool-bar{
+	position:absolute;
+	width:100%;
+/*	text-align:center;*/
+	bottom:10px;
+}
+
+#select-car{
+/*	float:center;*/
+	clear:both;
+	width:800px;
+	height:22px;
+	background-color:#272727;
+	margin:0 auto;
+}
+
+#select-car ul{
+	list-style:none;
+	padding-top:4px;
+}
+
+#select-car ul li{
+	display:inline-block;
+}
+
+#nav li.top { 
+/*	float:center;*/
+/*	padding:0 20px 0 20px;*/
+	margin:0 50px 0 20px;
+	cursor:default;
+	position:relative;
+}
+
+
+/* sub menu */
+
+#nav li:hover {
+	position:relative;
+}
+
+#nav li:hover ul.car
+{
+	left:-35px;
+	padding:5px; 
+	top:-170px;/*modify here to rezise menu*/
+	background: #272727;  
+	white-space:nowrap; 
+	width:auto;
+	height:auto; 
+	cursor:pointer;
+}
+
+#nav li:hover ul.sub
+{
+	left:-85px;
+	padding:5px; 
+	top:-80px;/*modify here to rezise menu*/
+	background: #272727;  
+	white-space:nowrap; 
+	width:auto;
+	height:auto;
+}
+
+#nav li:hover ul.credits
+{
+	left:-545px; 
+	top:-233px;/*modify here to rezise menu*/
+	padding-left:12px;
+	background: #272727;  
+	width:628px;
+	height:230px;
+	white-space:nowrap;
+	text-align:left;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#nav li:hover ul.credits a{
+	cursor:pointer
+}
+
+#nav li:hover ul.credits a {
+	text-decoration:underline;	
+}
+
+ul.sub li:hover, li.top a:hover
+{
+	color:#900;
+}
+
+#nav li:hover ul.color
+{
+	left:-100px; 
+	top:-110px;
+	background: #272727; 
+	white-space:nowrap; 
+	width:244px;
+	height:108px;
+}
+
+#nav li:hover ul.car li
+{
+	padding-left:10px;
+	padding-right:10px;
+	display:block; 
+	height:20px; 
+	position:relative; 
+/*	float:center; 
+*/	width:auto; 
+	font-weight:normal;
+/*	z-index:-100px;
+*/}
+
+#nav ul
+{
+	position:absolute; 
+	left:-9999px;
+}
+
+.cars-link {
+	text-decoration:none !important;	
+}
+
+#fwa {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	margin-bottom:-3px;
+	cursor:pointer !important;
+}

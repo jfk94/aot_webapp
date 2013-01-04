@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Cabin Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cabin Condensed'), local('CabinCondensed'), url(http://themes.googleusercontent.com/static/fonts/cabincondensed/v4/B0txb0blf2N29WdYPJjMShZ1gqmQBTb4Nwa_fF0DajA.woff) format('woff');
+}

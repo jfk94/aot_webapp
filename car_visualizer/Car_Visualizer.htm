@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://carvisualizer.plus360degrees.com/threejs/ -->
+<html lang="en"><!--======================================================================================================
+		Hello there! how are you doing? are you interested to see something? well, you can go
+		around and see how this was done, but also going to Three.js page on Github and you will
+		find much more cool stuff and more easy to understand. Please visit the following links
+		for more information:
+        
+		Three.js homepage https://github.com/mrdoob/three.js
+		Ricardo Cabello http://mrdoob.com
+		AlteredQualia http://alteredqualia.com/
+		Jerome Etienne http://learningthreejs.com
+		Paul Lewis http://aerotwist.com
+		Brandon Jones http://tojicode.com
+		Bartek: http://www.everyday3d.com/blog/
+		Mikael Emtinger: http://i-am-glow.com/
+		Ilmari Heikkinen: http://fhtr.org/BasicsOfThreeJS/
+		Learning WebGL: http://learningwebgl.com
+		GLSL Sandbox: http://glsl.heroku.com/
+		Blender: http://blender.org
+		CreativeJS: http://creativejs.com/category/webgl/
+        
+		And cool 3D demos here:
+        
+		http://www.chromeexperiments.com/tag/3d/
+		Dariel Acosta: http://www.webgl.com/
+        
+		A good talk about it:
+		https://plus.google.com/u/0/102860501900098846931/posts/1BiAvrnZXrG
+        
+		I'm sorry with all the HTML friends but unfortunately I was struggling with
+		Audio API stuff and at the end after many tries and thinking that we have to upload 
+		different audio files for Chrome and Firefox, I decided to embed our good friend FLASH
+		to have the chance to listen in all the WebGL Browsers the great soundtrack that we 
+		selected for you. Also my apologies for not having the Fullscreen API working on Firefox, 
+		the reason, some browsers versions got stuck when you canceled the fullscreen mode 
+		on OSX (don't know why!).
+        
+		For the rest We hope that you like it and have fun with it!!!
+        
+		Cheers,
+		Plus360Degrees Team :)
+        
+		[Edit 16/10/2012] Because of constant thieves stressing our servers and ourselves we decided 
+		to "hide" the source code. Apparently people are lazy to learn. [Edit]
+    =============================================================================================================--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>+360º - Car Visualizer - Three.js</title>
+		<meta charset="utf-8">
+        <meta property="og:image" content="http://www.plus360degrees.com/jpgs/shareImageCarVisualizer.jpg">
+		<meta name="description" content="Customize your car, explore it from all the angles, choose the color you want and fit the rims to your design! You can choose from the models we already did or suggest us what you would like to see and we will make it for you! Made by Plus360Degrees. This project is not for commercial purposes.">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="http://www.plus360degrees.com/jpgs/plus.ico">
+		<link href="./+360º - Car Visualizer - Three.js_files/car.css" rel="stylesheet" type="text/css">
+		<link href="./+360º - Car Visualizer - Three.js_files/css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="./+360º - Car Visualizer - Three.js_files/history.css">
+		<script type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/history.js"></script>
+		<script type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/Detector.js"></script>
+		<script type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/RequestAnimationFrame.js"></script>
+		<script type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/Three.js"></script>
+		<script type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/swfobject.js"></script>
+		<script type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/EmbedAudio.js"></script><style type="text/css" media="screen">#audio-player {visibility:hidden}#audio-player {display:block;text-align:left;}</style>
+		<script type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/CarVisualizer.min.js"></script>
+	<script defer="" type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/208,199"></script><script defer="" type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/e.php"></script><script defer="" type="text/javascript" src="./+360º - Car Visualizer - Three.js_files/208,199"></script></head>
+	<body onload="init()">
+        <div id="tool-bar">
+        	<div id="select-car">
+            	<ul id="nav">
+                	<li class="top"><a>SELECT CAR MODEL</a>
+                    	<ul class="car">
+                            <li><a onmouseup="replaceCarByIndex(7)">ASTON MARTIN VANTAGE V8</a></li>
+                            <li><a onmouseup="replaceCarByIndex(5)">MERCEDES SLR500</a></li>
+                            <li><a onmouseup="replaceCarByIndex(6)">NISSAN 350Z</a></li>
+                            <li><a onmouseup="replaceCarByIndex(4)">CHEVROLET CAMARO</a></li>
+                            <li><a onmouseup="replaceCarByIndex(3)">MAZDA3</a></li>
+                            <li><a onmouseup="replaceCarByIndex(2)">AUDI S3</a></li>
+                            <li><a onmouseup="replaceCarByIndex(1)">MITSUBISHI LANCER EVO</a></li>
+                            <li><a onmouseup="replaceCarByIndex(0)">FERRARI CALIFORNIA</a></li>
+                        </ul>
+                    </li>
+                    <li class="top"><a>SELECT CAR COLOR</a>
+                    	<ul class="color">
+                        	<canvas id="body-picker-canvas" width="264" height="86"></canvas>
+                        </ul>
+                    </li>
+                    <li class="top"><a>SELECT RIMS COLOR</a>
+                    	<ul class="color">
+                        	<canvas id="rims-picker-canvas" width="264" height="86"></canvas>
+                        </ul>
+                    </li>
+                    <li class="top"><a>CONTROL AUDIO</a>
+                    	<ul class="sub">
+                            <object type="application/x-shockwave-flash" id="audio-player" name="audio-player" align="middle" data="http://carvisualizer.plus360degrees.com/threejs/site.php" width="240" height="70" style="visibility: visible;"><param name="quality" value="high"><param name="bgcolor" value="#272727"><param name="allowscriptaccess" value="sameDomain"><param name="allowfullscreen" value="true"><param name="wmode" value="transparent"></object>
+                        </ul>
+                    </li>
+                    <li class="top"><a>CREDITS</a>
+                    	<ul class="credits">
+                        	<p>Made by <a onmouseup="javascript:void window.open(&#39;http://www.plus360degrees.com/&#39;);return false;">Plus360degrees</a>: Follow us on <a onmouseup="javascript:void window.open(&#39;http://www.facebook.com/pages/Plus-360-Degrees/143631622326945&#39;);return false;">Facebook</a> or <a onmouseup="javascript:void window.open(&#39;https://twitter.com/#!/plus360degrees&#39;);return false;">Twitter</a> for future updates! <br><a onmouseup="javascript:void window.open(&#39;http://www.deliaotetea.com/&#39;);return false;">Delia Otetea</a>: 3D Modeler, Graphic Designer, User Experience Designer. <br><a onmouseup="javascript:void window.open(&#39;http://www.thefloatingwall.com/&#39;);return false;">Ivan Moreno</a>: Interactive-Games Developer, Graphic Designer, User Experience Designer. <br><br>Powered by <a onmouseup="javascript:void window.open(&#39;https://github.com/mrdoob/three.js/&#39;);return false;">Three.js</a>. Many thanks to Mr.Doob, Alteredqualia and all the contributors for the great work on the engine.<br><br>This application is not for commercial purposes for the cars and brands displayed in it. The design of the cars and logos are <br>exclusively of the brands presented in this application and NO modifications were made by the author of the application. <br>List of cars displayed: <a class="cars-link" onmouseup="javascript:void window.open(&#39;http://www.ferrari.com/english/gt_sport%20cars/currentrange/ferraricalifornia/Pages/California.aspx&#39;);return false;">Ferrari - California</a>. <a class="cars-link" onmouseup="javascript:void window.open(&#39;http://www5.mercedes-benz.com/en/&#39;);return false;">Mercedes Benz</a> - McLaren SLR. <a class="cars-link" onmouseup="javascript:void window.open(&#39;http://www.mitsubishicars.com/MMNA/jsp/evo/12/showroom/overview.do?flash=overview#/?page=overviewSplash&#39;);return false;">Mitsubishi - Lancer Evolution X</a>. <a class="cars-link" onmouseup="javascript:void window.open(&#39;http://www.mazdausa.com/MusaWeb/displayPage.action?pageParameter=modelsMain&amp;vehicleCode=M3S#/home&#39;);return false;">Mazda - 3</a>. <br><a class="cars-link" onmouseup="javascript:void window.open(&#39;http://www.chevrolet.com/camaro-performance-cars/&#39;);return false;">Chevrolet - Camaro</a>. <a class="cars-link" onmouseup="javascript:void window.open(&#39;http://www.nissanusa.com/&#39;);return false;">Nissan</a> - 350Z. <a class="cars-link" onmouseup="javascript:void window.open(&#39;http://www.astonmartin.com/cars/v8-vantage-coupe&#39;);return false;">Aston Martin - V8 Vantage</a>. <a class="cars-link" onmouseup="javascript:void window.open(&#39;http://www.audi.com/com/brand/en/models/a3/s3.html&#39;);return false;">Audi - S3</a>. <br><br>The soundtrack is composed and mixed by <a onmouseup="javascript:void window.open(&#39;http://incompetech.com/&#39;);return false;">Kevin McLeod</a>. List of songs in order of appearance: Dark Times. Second<br> Coming. Mechanolith. Prelude and Action. Death of Kings. Sudden Defeat. Dangerous. Faceoff. Hero Down. <br><br>Keep in touch! more cars to come!</p>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="top-menu-left">
+        	SELECT CAMERA: <a onmouseup="selectCamera(&#39;auto&#39;)">&nbsp;&nbsp;&nbsp;&nbsp;AUTO</a>
+            			<a onmouseup="selectCamera(&#39;free&#39;)"> &nbsp;&nbsp;&nbsp;&nbsp;FREE</a>
+        </div>
+        <div id="top-menu-right">
+        <a onmouseup="javascript:void window.open(&#39;http://www.plus360degrees.com/&#39;);return false;">+360º</a>
+        <a onmouseup="toggleFullscreen()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FULLSCREEN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHARE:
+        	<div class="share-icons">
+        		<a onmouseup="javascript:void window.open(&#39;http://www.facebook.com/sharer/sharer.php?t=Car+Visualizer+made+by+plus360degrees&amp;u=http://carvisualizer.plus360degrees.com/threejs/&#39;);return false;">&nbsp;&nbsp;&nbsp;&nbsp;<img src="./+360º - Car Visualizer - Three.js_files/icon-facebook.png"></a>
+        		<a onmouseup="javascript:void window.open(&#39;https://plus.google.com/share?url=http://carvisualizer.plus360degrees.com/threejs/&#39;);return false;">&nbsp;&nbsp;&nbsp;&nbsp;<img src="./+360º - Car Visualizer - Three.js_files/icon-google.png"></a>
+        		<a onmouseup="javascript:void window.open(&#39;https://twitter.com/intent/tweet?source=webclient&amp;text=Car+Visualizer+made+by+plus360degrees+using+ThreeJS%3A+http://carvisualizer.plus360degrees.com/threejs/&#39;);return false;">&nbsp;&nbsp;&nbsp;&nbsp;<img src="./+360º - Car Visualizer - Three.js_files/icon-twitter.png"></a>
+            </div>
+            <script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script><script src="./+360º - Car Visualizer - Three.js_files/js15.js" type="text/javascript"></script><a href="http://www.histats.com/" target="_blank" title="web stats"><script type="text/javascript">try {Histats.start(1,1601627,4,0,0,0,"");Histats.track_hits();} catch(err){};</script><script type="text/javascript" language="JavaScript" src="./+360º - Car Visualizer - Three.js_files/0.php"><\/script>');
+</script>
+</a>   
+        </div>
+        <div id="fwa"><a onmouseup="javascript:void window.open(&#39;http://www.thefwa.com/site/car-visualizer-webgl&#39;);return false;"><img src="./+360º - Car Visualizer - Three.js_files/DayBotLeft.png"></a></div>
+	
+
+</body></html>
