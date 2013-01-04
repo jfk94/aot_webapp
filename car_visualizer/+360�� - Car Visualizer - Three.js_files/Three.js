@@ -10593,7 +10593,12 @@ THREE.JSONLoader.prototype = new THREE.Loader;
 THREE.JSONLoader.prototype.constructor = THREE.JSONLoader;
 THREE.JSONLoader.prototype.supr = THREE.Loader.prototype;
 THREE.JSONLoader.prototype.load = function (a, b, c) {
-    if (a instanceof Object) console.warn("DEPRECATED: JSONLoader( parameters ) is now JSONLoader( url, callback, texturePath )."), c = a, a = c.model, b = c.callback, c = c.texture_path;
+    if (a instanceof Object) {
+        this.createModel(a, b);
+        return;
+    }
+
+    if (a instanceof Object) c = a, a = c.model, b = c.callback, c = c.texture_path;
     c = c ? c : this.extractUrlbase(a);
     this.onLoadStart();
     this.loadAjaxJSON(this, a, b, c)
