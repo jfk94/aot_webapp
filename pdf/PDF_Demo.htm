@@ -1,0 +1,54 @@
+
+<!-- saved from url=(0041)http://syntensity.com/static/poppler.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-949">
+  <title>
+    Emscripten: PDF Demo
+  </title>
+  <script type="text/javascript" async="" src="./PDF_Demo_files/ga.js"></script>
+  <script type="text/javascript" async="" src="./PDF_Demo_files/pdf_demo_arg.js"></script>
+  <script src="./PDF_Demo_files/poppler.yui.js"></script>
+  <script src="./PDF_Demo_files/paper.pdf.js"></script>
+  <script src="./PDF_Demo_files/pdf_demo_util.js"></script>
+</head>
+<body>
+  <h1>PDF Rendering on the Web</h1>
+  <p><b>This is a demo of rendering a PDF document entirely in
+     JavaScript, without any plugins</b>. It uses <a href="http://poppler.freedesktop.org/">Poppler</a>, an open source PDF library,
+     which was compiled to JavaScript using <a href="http://emscripten.org/">Emscripten</a>. Also used in this
+     demo is <a href="http://www.freetype.org/">FreeType</a> for font rendering.</p>
+  <p>After the PDF is
+     decoded into pixel data, it is rendered using a Canvas element. This demo should therefore work in any web
+     browser that supports the Canvas element.</p>
+  <p><b>Click 'Go!'</b> to render a example PDF file.</p>
+  <p>You can also change the URL to that of a PDF document, which will be
+     downloaded and rendered. In order to process the binary data,
+     <a href="https://developer.mozilla.org/en/using_xmlhttprequest#Receiving_binary_data_using_JavaScript_typed_arrays">mozResponseArrayBuffer</a>
+     is used, which is specific to Firefox 4. Note also that the usual limitations of cross-site XHRs apply, so
+     you may not be able to download PDFs from random servers (as an example, try
+     <a href="http://www.syntensity.com/static/emscripten.pdf">'emscripten.pdf'</a>, which is a PDF
+     of Emscripten's home page, on this server. Note: Type just 'emscripten.pdf', without quotes, and not the whole URL).</p>
+  <hr>
+  <canvas id="canvas" width="1" height="1"></canvas>
+  <hr>
+  <form onsubmit="render(texty.value); return false">
+    PDF 2000 URL: <input type="text" name="texty" size="60" value="(replace this with a URL of a PDF document, or just click &#39;Go!&#39;)" onclick="if (value[0] === &#39;(&#39;) value=&#39;&#39;"><br>
+    <input type="submit" value="Go!">
+  </form>
+  <hr>
+  <div id="output" style="font-family: Courier New,Courier,monospace;"></div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17046828-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body></html>
