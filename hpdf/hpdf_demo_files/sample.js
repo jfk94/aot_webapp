@@ -1,12 +1,22 @@
-
 function demo_pdf() {
 
 var pdf = new HPDF();
 
-text_demo2(pdf);
-text_annotation(pdf);
-arc_demo(pdf);
-line_demo(pdf);
+if (document.getElementById("chk_text").checked ==true) {
+  text_demo2(pdf);  
+}
+
+if (document.getElementById("chk_ann").checked ==true) {
+  text_annotation(pdf); 
+}
+
+if (document.getElementById("chk_arc").checked ==true) {
+  arc_demo(pdf);
+}
+
+if (document.getElementById("chk_line").checked ==true) {
+  line_demo(pdf);
+}
 
 document.getElementById("pdf_viewer").width = window.innerWidth;
 document.getElementById("pdf_viewer").height = window.innerHeight - 100;
