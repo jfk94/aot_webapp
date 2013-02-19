@@ -1,0 +1,76 @@
+/*** reset ***/
+html, body {top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding: 0; height: 100%; 
+	color: #fff; font: 100%/1.5 "Cambria", Georgia, "Times New Roman", serif;}
+
+h1, div {margin: 0;}
+
+div {
+	width: 100%;
+}
+
+/*** introduction section ***/
+
+.intro-div {
+	background-color: #171814;
+	height: 75%;
+	min-height: 420px;  
+}
+
+.intro-div>h1 {
+	padding-top: 15px;
+	text-align: center;
+	font-size: 3.5em;
+	text-shadow: 0 1px 0 rgba(250, 250, 250, 0.8);
+}
+
+.intro-div>h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	color: black;
+	text-shadow: 0px 0px 10px #99E0F4;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-bottom: 2px dashed #444;
+}
+
+.intro-div>p, ul {
+	padding-left: 5%;
+	padding-right: 5%;
+	color: #fff;
+}
+
+.intro-div>ul>li {
+	color: #d3d3d3;
+	font-size: 0.95em;
+}
+
+/*** pdf ***/
+
+.pdf-container {
+	background-color: #99E0F4;
+	color: #000;
+	height: 25%;
+	text-align: center;
+}
+
+.pdf-container>div {
+	padding: 10px;
+}
+
+.pdf-container>div.option>label {
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.pdf-container>div.btnDiv>input[type="button"] {
+	width: 60%;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0px;
+	background-color: #000;
+	text-align: right;
+}

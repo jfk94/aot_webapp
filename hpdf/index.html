@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>hpdf.js - Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="styles/vendor/bootstrap.css">
+        <link rel="stylesheet" href="styles/vendor/bootstrap-responsive.css">
+        <link rel="stylesheet" href="styles/main.css">
+        
+        <script type="text/javascript" src="scripts/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/hpdf.js"></script>
+        <script type="text/javascript" src="scripts/sample.js"></script>
+        <script type="text/javascript" src="scripts/PluginDetect_AdobeReader_PDFReader.js"></script>
+    </head>
+    <body>
+        <div class="intro-div">
+            <h1>hpdf.js</h1>
+            <h2>Create PDF files in pure JS using compiled libharu</h2>
+            <p><span class="large">libHaru</span> is a free, cross platform, open source library for generating PDF files. At this moment libHaru does not support reading and editing existing PDF files and it's unlikely this support will ever appear.</p>
+            <p>It supports the following features:</p>
+            <ul> 
+                <li>Generating PDF files with lines, text, images.</li>
+                <li>Outline, text annotation, link annotation.</li>
+                <li>Compressing document with deflate-decode.</li>
+                <li>Embedding PNG, Jpeg images.</li>
+                <li>Embedding Type1 font and TrueType font.</li>
+                <li>Creating encrypted PDF files.</li>
+                <li>Using various character sets (ISO8859-1~16, MSCP1250~8, KOI8-R).</li>
+                <li>Supporting CJK fonts and encodings.</li>			
+            </ul>
+    		<p>You can add the feature of PDF creation by using HARU without understanding complicated internal structure of PDF. libHaru is written in ANSI C, so theoretically it supports most of the modern OSes.</p>
+        </div>
+        <div class="pdf-container">
+            <div class="option">
+                <label class="checkbox inline"><input type="checkbox" id="chk_text">Text</label>
+                <label class="checkbox inline"><input type="checkbox" id="chk_ann">Annotation</label>
+                <label class="checkbox inline"><input type="checkbox" id="chk_arc">Arc</label>
+                <label class="checkbox inline"><input type="checkbox" id="chk_line">Line</label>
+            </div>
+            <div class="btnDiv">
+                <input id="demo_button" class="btn btn-large btn-inverse" type="button" value="Generate PDF File" onclick="demo_pdf()" />
+            </div>
+        </div>
+        <div id="HiddenDiv">
+            <iframe id= "pdf_viewer"></iframe>
+        </div>
+
+        <div id="plugindetect"></div>
+        
+        <div id="footer">OBIGO Inc. 2013</div>
+            
+        <!-- Add your site or application content here --> 
+         <script type="text/javascript">
+            var version = PluginDetect.getVersion('AdobeReader');
+            if (null != version) {
+                document.getElementById("demo_button").value="View PDF File";
+                document.getElementById("HiddenDiv").style.display='block';
+            } else {
+                document.getElementById("demo_button").value="Generate PDF File";
+                document.getElementById("HiddenDiv").style.display='none';
+            }
+        </script>        
+    </body>
+</html>
